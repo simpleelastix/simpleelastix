@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>SimpleElastix</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head> 
+
+<body data-spy="scroll">
+    
+    <!---//Facebook button code-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <!-- ******HEADER****** --> 
+    <header id="header" class="header">  
+        <div class="container">            
+            <h1 class="logo pull-left">
+                <a class="scrollto" href="#promo">
+                    <span class="logo-title">SimpleElastix</span>
+                </a>
+            </h1><!--//logo-->              
+            <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button><!--//nav-toggle-->
+                </div><!--//navbar-header-->            
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#about">About</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#documentation">Documentation</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#download">Download</a></li>                        
+                        <li class="nav-item last"><a class="scrollto" href="#contact">Contact</a></li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->
+        </div>
+    </header><!--//header-->
+    
+    <!-- ******PROMO****** -->
+    <section id="promo" class="promo section offset-header">
+        <div class="container text-center">
+            <h2 class="title">Simple<span class="highlight">Elastix</span></h2>
+            <p class="intro">Medical Image Registration Toolkit</p>
+            <div class="btns">
+                <a class="btn btn-cta-secondary" class="scrollto" href="#documentation">Documentation</a>
+                <a class="btn btn-cta-primary" class="scrollto" href="#download">Download</a>
+            </div>
+            <ul class="meta list-inline">
+                <li><a href="https://github.com/kaspermarstal/SimpleElastix" target="_blank">View on GitHub</a></li>
+                <li><a href="https://simpleelastix.readthedocs.org/" target="_blank">Full Documentation</a></li>
+                <li>Created by: <a href="http://kaspermarstal.github.io/" target="_blank">Kasper Marstal</a></li>
+                <li><a href="http://dx.doi.org/10.5281/zenodo.19049"><img src="https://zenodo.org/badge/doi/10.5281/zenodo.19049.svg" alt="10.5281/zenodo.19049"></a></li>
+            </ul><!--//meta-->
+        </div><!--//container-->
+        <!--<div class="social-media">
+            <div class="social-media-inner container text-center">
+                    <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+                    <iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220px" height="60px"></iframe>
+            </div>
+        </div>-->
+    </section><!--//promo-->
+    
+    <!-- ******ABOUT****** --> 
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="title text-center">What is SimpleElastix?</h2>
+            <p class="intro text-center">SimpleElastix is an image processing library that makes state-of-the-art medical image registration really easy to do. With SimpleElastix you can access fast C++ registration algorithms from your favorite language like Python, Ruby, Java and R.</p>
+            <div class="row">
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Designed For Researchers</h3>
+                        <p>A user-friendly API allows you to quickly prototype an application, write robust reusable components and let SimpleElastix handle the low-level computation.</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-comments-o"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Multilingual</h3>
+                        <p>Native bindings for C++, Python, Java, R, Ruby, Octave, Lua, Tcl and C# allows you to use state-of-the-art algorithms together with your language of choice.</p>
+                    </div><!--//content-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-server"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Powerful</h3>
+                        <p>Efficient multi-threaded C++ components gets you fast results and accelerates development. You can further tune GPU components and stochastic sub-sampling for even more speed.</p>
+                    </div><!--//content-->
+                </div><!--//item-->           
+                <div class="clearfix visible-md"></div>    
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-sliders"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Parameter File Interface</h3>
+                        <p>A parameter-driven interface makes configuration of elastix as simple as setting string variables. Pre-configured parameter files for rigid-, affine-, non-rigid- and non-rigid groupwise registration serve as good starting points for new users.</p>
+                    </div><!--//content-->
+                </div><!--//item-->                
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">Easy To Extend</h3>
+                        <p>Elastix allows you to easily write your own transforms, metrics, optimizers etc. and call your own C++ code in any of the supported languages. </p>
+                    </div><!--//content-->
+                </div><!--//item-->
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-holder">
+                        <i class="fa fa-refresh"></i>
+                    </div>
+                    <div class="content">
+                        <h3 class="sub-title">SimpleITK Integration</h3>
+                        <p>SimpleElastix comes with the entire library of SimpeITK image processing algorithms and works directly on these images. This allows you to pre- and post-process images with robust SimpleITK algorithms.</p>
+                    </div><!--//content-->
+                </div><!--//item-->               
+            </div><!--//row-->            
+        </div><!--//container-->
+    </section><!--//about-->
+
+    <!-- ******DOCS****** --> 
+    <section id="documentation" class="docs section">
+        <div class="container">
+            <div class="docs-inner">
+            <h2 class="title text-center">Documentation</h2>
+            <div class="block">
+                <p class="btns text-center">
+                    <a class="btn btn-cta-primary" href="https://simpleelastix.readthedocs.org" target="_blank">HTML Documentation</a>
+                    <a class="btn btn-cta-secondary" href="http://media.readthedocs.org/pdf/simpleelastix/latest/simpleelastix.pdf" target="_blank">PDF Documentation</a>
+                </p>
+            </div>          
+            <div class="block">
+                <h3 class="sub-title text-center">Example 1: A Single Line of Code</h3>
+                <p>With SimpleElastix it is dead simple to align images of different patients. Depending on the complexity of your problem, you can often register images with a single function call (in this case Python).</p>
+
+                <div class="code-block">
+                    <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                    <pre><code class="language-python">
+ >>> resultImage = SimpleITK.Elastix(fixedImage, movingImage, "nonrigid")
+                     </code></pre>
+                </div><!--//code-block-->
+            </div><!--//block-->
+            
+            <div class="block">
+                <h3 class="sub-title text-center">Example 2: Robust Initialization</h3>
+                <p>Difficult registration problems often need initialization to account for global translation, scaling and rotation prior to non-rgid registration. The registration method is configured by an intuitive parameter interface. We pass elastix a vector of parameter maps and elastix will apply the different types of registrations sequentially using the output of one registration as input for the next.</p>
+                <div class="code-block">
+                    <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                    <pre>
+    <code class="language-python">
+ >>> parameterMapList = sitk.ParameterMapList()
+ >>> parameterMapList.append(sitk.GetDefaultParameterMap("translation"))
+ >>> parameterMapList.append(sitk.GetDefaultParameterMap("rigid"))
+ >>> parameterMapList.append(sitk.GetDefaultParameterMap("affine"))
+ >>> parameterMapList.append(sitk.GetDefaultParameterMap("nonrigid"))
+ >>> resultImage = sitk.Elastix(fixedImage, movingImage, parameterMapList)
+    </code></pre>
+                </div><!--//code-block-->
+            </div><!--//block-->
+            
+            <div class="block">
+                <h3 class="sub-title text-center">Example 3: Atlas-based Segmentation</h3>
+                <p>Using an object-oriented interface you can obtain transform parameters from one registration and apply them to other images. For example, you can transform a label image to do atlas-based segmentation.</p>
+                <div class="code-block">
+                    <pre><code class="language-javascript">
+ # Non-rigid registration
+ selx = SimpleITK.SimpleElastix()
+ selx.SetParameterMap(sitk.GetDefaultParameterMap())
+ selx.SetFixedImage(fixedImage)
+ selx.SetMovingImage(movingImage)
+
+ # We turn off interpolation for labels
+ parameterMap = selx.GetTransformParameterMap()
+ parameterMap[0]["ResampleInterpolator"] = ["FinalNearestNeighborInterpolator"]
+
+ # Warp label image using transform from above
+ resultLabel = SimpleITK.Transformix(movingLabels, parameterMap)
+                    </code></pre>
+                </div><!--//code-block-->
+            </div><!--//block-->   
+            <div class="block">
+                <h3 class="sub-title text-center">Full Documentation</h3>
+                <p>The full documentation describes how to install SimpleElastix on Linux, Mac OS X and Windows. Here you will also find an extensive introduction to medical image registration and the different registration components available in SimpleElastix along with complete hands-on examples.</p>
+            </div><!--//block-->
+            <div class="block">
+                <p class="text-center">
+                    <a class="btn btn-cta-primary" href="https://simpleelastix.readthedocs.org" target="_blank">More on readthedocs.org</a>
+                </p>
+            </div><!--//block--> 
+            </div><!--//docs-inner-->         
+        </div><!--//container-->
+    </section><!--//docs-->
+    
+    <!-- ******LICENSE****** --> 
+    <section id="download" class="license section">
+        <div class="container">
+            <div class="license-inner">
+            <h2 class="title text-center">Download</h2>
+                <div class="block">
+                    <p class="btns text-center">
+                        <a class="btn btn-cta-primary" href="https://github.com/kaspermarstal/SimpleElastix" target="_blank"><i class="fa fa-github"></i> Clone on Github</a>
+                        <a class="btn btn-cta-secondary" href="https://github.com/kaspermarstal/SimpleElastix/archive/v0.9.0-SimpleElastix.zip" target="_blank"><i class="fa fa-download"></i> Source code (zip)</a>
+                        <a class="btn btn-cta-secondary" href="https://github.com/kaspermarstal/SimpleElastix/archive/v0.9.0-SimpleElastix.tar.gz" target="_blank"><i class="fa fa-download"></i> Source code (tar.gz)</a>
+                    </p>
+                </div> 
+                <div class="cta-container">
+                    <p>See documentation for an <a href="https://simpleelastix.readthedocs.org/GettingStarted.html" target="_blank">installation guide</a>. SimpleElastix is developed and maintained by <a href="https://kaspermarstal.github.io/" target="_blank">Kasper Marstal</a> and released under the permissive Apache 2.0 License. You are free to use SimpleElastix for any activity, including commercial, but you have to cite the project accordingly:</p>
+                </div>
+                <div class="cta-container">
+                    <code><i>Kasper Marstal, SimpleElastix, (2015), Github repository: https://github.com/kaspermarstal/SimpleElastix, DOI: 10.5281/zenodo.19049</i>
+                    </code>
+                </div>
+                <div class="cta-container">
+                    <div class="speech-bubble">                    
+                        <p class="intro">If you find SimpleElastix useful to your work you can support further development by donating to this project! You can also support the project by spreading the word and starring the Github repository.</p>
+                        <div class="icon-holder  text-center"><i class="fa fa-smile-o"></i></div>
+                    </div><!--//speech-bubble-->
+                    <div class="btn-container  text-center">         
+                        <!--PayPal generated code starts-->
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="BJ3H8U6PKSN3U">
+                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form><!--//PayPal generated code ends-->                 
+                    </div><!--//btn-container-->
+                </div><!--//cta-container-->
+            </div><!--//license-inner-->
+        </div><!--//container-->
+    </section><!--//how-->
+    
+    <!-- ******CONTACT****** --> 
+    <section id="contact" class="contact section has-pattern">
+        <div class="container">
+            <div class="contact-inner">
+                <h2 class="title  text-center">Contact</h2>
+                <div class="author-message">                      
+                    <div class="profile">
+                        <img class="img-responsive" src="assets/images/profile.jpeg" alt="" />
+                    </div><!--//profile-->
+                    <div class="speech-bubble">
+                        <h3 class="sub-title">I hope you find SimpleElastix useful in your work. </h3>
+                        <p>Feel free to get in touch if you have any questions or suggestions. If you like what I do, you can follow me on <a href="https://twitter.com/kaspermarstal" target="_blank">Twitter</a>.
+                        <div class="source">
+                            <span class="name"><a href="https://kaspermarstal.github.io" target="_blank">Kasper Marstal</a></span>
+                            <br />
+                            <span class="title">M.Sc. Eng., Medicin And Technology, PhD Student</span>
+                        </div><!--//source-->
+                    </div><!--//speech-bubble-->                        
+                </div><!--//author-message-->
+                <div class="clearfix"></div>
+                <div class="info text-center">
+                    <h4 class="sub-title">Get Connected</h4>
+                    <ul class="social-icons list-inline">
+                        <li><a href="https://github.com/kaspermarstal/SimpleElastix" target="_blank"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://twitter.com/kaspermarstal" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/kaspermarstal"><i class="fa fa-linkedin"></i></a></li>   
+                        <li class="last"><a href="mailto: kaspermarstal@gmail.com.com"><i class="fa fa-envelope"></i></a></li>              
+                    </ul>
+                </div><!--//info-->
+            </div><!--//contact-inner-->
+        </div><!--//container-->
+    </section><!--//contact-->  
+      
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+            <small class="copyright">Made with <i class="fa fa-heart"></i> by <a href="http://kaspermarstal.github.io" target="_blank">Kasper Marstal</a></small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+     
+    <!-- Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery.easing.1.3.js"></script>   
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/js/main.js"></script>       
+</body>
+</html> 
+
