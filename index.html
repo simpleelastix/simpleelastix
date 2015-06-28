@@ -11,8 +11,9 @@
     <meta name="description" content="">
     <meta name="author" content="">    
     <link rel="shortcut icon" href="favicon.ico">  
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <link rel="stylesheet" href="assets/plugins/devicon/devicon.min.css">
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <!-- Plugins CSS -->    
@@ -38,22 +39,15 @@
     </script>
     <!---//Facebook button code-->
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
     
     <!-- ******HEADER****** --> 
     <header id="header" class="header">  
         <div class="container">            
             <h1 class="logo pull-left">
                 <a class="scrollto" href="#promo">
-                    <span class="logo-title">SimpleElastix</span>
+                    <span class="logo-title">SimpleElastix</span> 
                 </a>
-            </h1><!--//logo-->              
+            </h1><!--//logo-->       
             <nav id="main-nav" class="main-nav navbar-right" role="navigation">
                 <div class="navbar-header">
                     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -80,15 +74,57 @@
     <section id="promo" class="promo section offset-header">
         <div class="container text-center">
             <h2 class="title">Simple<span class="highlight">Elastix</span></h2>
-            <p class="intro">Medical Image Registration Toolkit</p>
+            <!--<p class="intro">Image Processing Library</p>-->
+
+            <div id="header-carousel" class="carousel slide player" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#header-carousel" data-slide-to="1"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <video width="100%" height="100%" autoplay loop>
+                            <source src="assets/videos/video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="carousel-caption">
+                            <h2>Image Registration Library</h2>
+                            <p>Automatically align anatomical structures.</p>
+                        </div>
+                    </div>
+                    <div class="item text-center lang-icon-container">
+                        <i class="devicon-cplusplus-plain colored lang-icon"></i>
+                        <i class="devicon-python-plain colored lang-icon"></i>
+                        <i class="devicon-java-plain colored lang-icon"></i>
+                        <i class="devicon-ruby-plain colored lang-icon"></i>
+                        <i class="devicon-csharp-plain colored lang-icon"></i>
+                        <div class="carousel-caption">
+                            <h2>Multilingual</h2>
+                            <p>Native bindings for C++, Python, Java, R, Ruby, Octave, Lua, Tcl and C#.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#header-carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#header-carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
             <div class="btns">
-                <a class="btn btn-cta-secondary" class="scrollto" href="#documentation">Documentation</a>
-                <a class="btn btn-cta-primary" class="scrollto" href="#download">Download</a>
+                <a class="btn btn-cta-secondary" class="scrollto" href="#download">Download</a>
+                <a class="btn btn-cta-primary" class="scrollto" href="#about">Tell me more!</a>
             </div>
             <ul class="meta list-inline">
                 <li><a href="https://github.com/kaspermarstal/SimpleElastix" target="_blank">View on GitHub</a></li>
                 <li><a href="https://simpleelastix.readthedocs.org/" target="_blank">Full Documentation</a></li>
-                <li>Created by: <a href="http://kaspermarstal.github.io/" target="_blank">Kasper Marstal</a></li>
                 <li><a href="http://dx.doi.org/10.5281/zenodo.19049"><img src="https://zenodo.org/badge/doi/10.5281/zenodo.19049.svg" alt="10.5281/zenodo.19049"></a></li>
             </ul><!--//meta-->
         </div><!--//container-->
@@ -130,7 +166,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Powerful</h3>
-                        <p>Efficient multi-threaded C++ components gets you fast results and accelerates development. You can further tune GPU components and stochastic sub-sampling for even more speed.</p>
+                        <p>Efficient multi-threaded C++ components gets you fast results and accelerates development. You can further use GPU components and tune stochastic sub-sampling for even more speed.</p>
                     </div><!--//content-->
                 </div><!--//item-->           
                 <div class="clearfix visible-md"></div>    
@@ -158,7 +194,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">SimpleITK Integration</h3>
-                        <p>SimpleElastix comes with the entire library of SimpeITK image processing algorithms and works directly on these images. This allows you to pre- and post-process images with robust SimpleITK algorithms.</p>
+                        <p>SimpleElastix comes with the entire library of SimpeITK image processing algorithms. This allows you to pre- and post-process images with robust SimpleITK algorithms.</p>
                     </div><!--//content-->
                 </div><!--//item-->               
             </div><!--//row-->            
@@ -183,6 +219,8 @@
                 <div class="code-block">
                     <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                     <pre><code class="language-python">
+ >>> fixedImage = SimpleITK.ReadImage("fixedImage.nii")
+ >>> movingImage = SimpleITK.ReadImage("movingImage.nii")
  >>> resultImage = SimpleITK.Elastix(fixedImage, movingImage, "nonrigid")
                      </code></pre>
                 </div><!--//code-block-->
@@ -190,14 +228,12 @@
             
             <div class="block">
                 <h3 class="sub-title text-center">Example 2: Robust Initialization</h3>
-                <p>Difficult registration problems often need initialization to account for global translation, scaling and rotation prior to non-rgid registration. The registration method is configured by an intuitive parameter interface. We pass elastix a vector of parameter maps and elastix will apply the different types of registrations sequentially using the output of one registration as input for the next.</p>
+                <p>Difficult registration problems often need initialization to account for global translation, scaling and rotation prior to non-rgid registration. With SimpleElastix you can pass a vector of configuration objects (we call them "Parameter Maps") and have elastix run registrations sequentially using the output of one registration as input for the next.</p>
                 <div class="code-block">
                     <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                     <pre>
     <code class="language-python">
  >>> parameterMapList = sitk.ParameterMapList()
- >>> parameterMapList.append(sitk.GetDefaultParameterMap("translation"))
- >>> parameterMapList.append(sitk.GetDefaultParameterMap("rigid"))
  >>> parameterMapList.append(sitk.GetDefaultParameterMap("affine"))
  >>> parameterMapList.append(sitk.GetDefaultParameterMap("nonrigid"))
  >>> resultImage = sitk.Elastix(fixedImage, movingImage, parameterMapList)
@@ -251,10 +287,10 @@
                     </p>
                 </div> 
                 <div class="cta-container">
-                    <p>See documentation for an <a href="https://simpleelastix.readthedocs.org/GettingStarted.html" target="_blank">installation guide</a>. SimpleElastix is developed and maintained by <a href="https://kaspermarstal.github.io/" target="_blank">Kasper Marstal</a> and released under the permissive Apache 2.0 License. You are free to use SimpleElastix for any activity, including commercial, but you have to cite the project accordingly:</p>
+                    <p>See documentation for an <a href="https://simpleelastix.readthedocs.org/GettingStarted.html" target="_blank">installation guide</a>. SimpleElastix is developed and maintained by <a href="https://kaspermarstal.github.io/" target="_blank">Kasper Marstal</a> and released under the permissive Apache 2.0 License. You are free to use SimpleElastix for any activity, including commercial, but please cite the project accordingly:</p>
                 </div>
                 <div class="cta-container">
-                    <code><i>Kasper Marstal, SimpleElastix, (2015), Github repository: https://github.com/kaspermarstal/SimpleElastix, DOI: 10.5281/zenodo.19049</i>
+                    <code><i>Kasper Marstal, SimpleElastix (2015), Github repository: https://github.com/kaspermarstal/SimpleElastix, DOI: 10.5281/zenodo.19049</i>
                     </code>
                 </div>
                 <div class="cta-container">
@@ -267,9 +303,10 @@
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                             <input type="hidden" name="cmd" value="_s-xclick">
                             <input type="hidden" name="hosted_button_id" value="BJ3H8U6PKSN3U">
-                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                            <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
                             <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                        </form><!--//PayPal generated code ends-->                 
+                        </form>
+<!--//PayPal generated code ends-->                 
                     </div><!--//btn-container-->
                 </div><!--//cta-container-->
             </div><!--//license-inner-->
@@ -287,7 +324,7 @@
                     </div><!--//profile-->
                     <div class="speech-bubble">
                         <h3 class="sub-title">I hope you find SimpleElastix useful in your work. </h3>
-                        <p>Feel free to get in touch if you have any questions or suggestions. If you like what I do, you can follow me on <a href="https://twitter.com/kaspermarstal" target="_blank">Twitter</a>.
+                        <p>Feel free to get in touch if you have any questions or suggestions. I also offer professional consulting services in medical image processing. Contact me with a description of your problem and we can have a chat.
                         <div class="source">
                             <span class="name"><a href="https://kaspermarstal.github.io" target="_blank">Kasper Marstal</a></span>
                             <br />
