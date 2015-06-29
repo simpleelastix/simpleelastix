@@ -183,7 +183,7 @@ pre code {
 .promo {
   background: #17baef;
   color: #fff;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 .promo .title {
   font-size: 98px;
@@ -254,24 +254,8 @@ pre code {
   left: 12%;
   right: 12%;
 }
-.promo pre {
-  font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 95%;
-  line-height: 140%;
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -o-pre-wrap;
-}
-.promo code {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 95%;
-  line-height: 140%;
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -o-pre-wrap;
-  background: #faf8f0;
+.promo .carousel-caption .highlight {
+  color: #eebf3f;
 }
 /* ======= About Section ======= */
 .about {
