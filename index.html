@@ -73,8 +73,8 @@
     <!-- ******PROMO****** -->
     <section id="promo" class="promo section offset-header">
         <div class="container text-center">
-            <h2 class="title">Simple<span class="highlight">Elastix</span></h2>
-            <p class="intro">Image Registration Library</p>
+            <!--<h2 class="title">Simple<span class="highlight">Elastix</span></h2>-->
+            <!--<p class="intro">Image Registration Library</p>-->
 
             <div id="header-carousel" class="carousel slide player" data-ride="carousel" data-interval="6000">
                 <!-- Indicators -->
@@ -87,16 +87,20 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <video width="100%" height="100%" autoplay loop>
+                        <video width="100%" height="280px" autoplay loop>
                             <source src="assets/videos/video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
+                        <div class="carousel-caption">   
+                            <h2>Simple<span class="highlight">Elastix</span></h2>
+                            <p>Image Registration Library</p>
+                        </div>
                     </div>
                     <div class="item">
-                        <div class="carousel-caption">
-                            <img src="assets/images/code.png" style="width: 95%; padding-bottom: 25px" />    
-                            <h2>Advanced algorithms. Simple API.</h2>
-                            <p>Designed for rapid prototyping and ease-of-use.</p>
+                        <img src="assets/images/code.png" style="width: 70%; display: block; margin-left: auto; margin-right: auto; padding-top: 12%" />  
+                        <div class="carousel-caption">  
+                            <h2>Advanced algorithms. <span class="highlight">Simple API.</span></h2>
+                            <p>Multi-resolution, multi-metric, multi-threaded</p>
                         </div>
                     </div>
                     <div class="item text-center lang-icon-container">
@@ -106,7 +110,7 @@
                         <i class="devicon-ruby-plain colored lang-icon"></i>
                         <i class="devicon-csharp-plain colored lang-icon"></i>
                         <div class="carousel-caption">
-                            <h2>One library. Nine languages.</h2>
+                            <h2>One library. <span class="highlight">Nine languages.</span></h2>
                             <p>Native bindings for C++, Python, Java, R, Ruby, Octave, Lua, Tcl and C#.</p>
                         </div>
                     </div>
@@ -161,7 +165,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Multilingual</h3>
-                        <p>Use your favorite programming language. SimpleElastaix comes with native bindings for C++, Python, Java, R, Ruby, Octave, Lua, Tcl and C#.</p>
+                        <p>Use your favorite programming language. SimpleElastix comes with native bindings for C++, Python, Java, R, Ruby, Octave, Lua, Tcl and C#.</p>
                     </div><!--//content-->
                 </div><!--//item-->
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -180,7 +184,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Parameter-driven Configuration</h3>
-                        <p>A parameter map interface makes it easy to configure registration components. Trying out different transforms, metrics and optimizers etc. is as easy as changing string variables.</p>
+                        <p>A parameter map interface makes it easy to configure registration components. Trying out different transforms, metrics and optimizers etc. is as easy as setting variables.</p>
                     </div><!--//content-->
                 </div><!--//item-->                
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -232,7 +236,7 @@
             
             <div class="block">
                 <h3 class="sub-title text-center">Example 2: Robust Initialization</h3>
-                <p>Difficult registration problems often need initialization to account for global translation, scaling and rotation prior to non-rgid registration. You can pass a vector of configuration objects (which we refer to as "Parameter Maps") and have elastix run registrations sequentially using output of one registration as input for the next.</p>
+                <p>Difficult registration problems often need initialization to account for global translation, scaling and rotation prior to non-rigid registration. You can pass a vector of configuration objects (which we refer to as "Parameter Maps") and have elastix run registrations sequentially using output of one registration as input for the next.</p>
                 <div class="code-block">
                     <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                     <pre>
@@ -255,6 +259,7 @@
  selx.SetParameterMap(sitk.GetDefaultParameterMap())
  selx.SetFixedImage(fixedImage)
  selx.SetMovingImage(movingImage)
+ selx.Execute()
 
  # We turn off interpolation for labels
  parameterMap = selx.GetTransformParameterMap()
