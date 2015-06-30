@@ -294,33 +294,104 @@ pre code {
   font-size: 18px;
 }
 /* ======= Features Section ======= */
-.features {
-  padding: 80px 0;
+.testimonials {
   background: #17baef;
   color: #fff;
 }
-.features .title {
+.testimonials .title {
   color: #074f66;
   margin-top: 0;
   margin-bottom: 30px;
 }
-.features a {
+.testimonials a {
   color: #074f66;
 }
-.features a:hover {
+.testimonials a:hover {
   color: #042a36;
 }
-.features .feature-list li {
+.testimonials .feature-list li {
   margin-bottom: 10px;
   color: #074f66;
 }
-.features .feature-list li .fa {
+.testimonials .feature-list li .fa {
   margin-right: 5px;
   color: #fff;
 }
+.testimonials .author-message {
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.testimonials .author-message .profile {
+  position: absolute;
+  left: 30px;
+  top: 15px;
+  width: 100px;
+  height: 100px;
+}
+.testimonials .author-message .profile .person {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.testimonials .author-message .profile .institution {
+  background: #fff;
+  width: 100%;
+  margin-top: 10px;
+}
+.testimonials .author-message .speech-bubble {
+  margin-left: 155px;
+  background: #10b2e7;
+  color: #074f66;
+  padding: 30px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  position: relative;
+}
+.testimonials .author-message .speech-bubble .sub-title {
+  color: #074f66;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.testimonials .author-message .speech-bubble a {
+  color: #09617e;
+}
+.testimonials .author-message .speech-bubble:after {
+  position: absolute;
+  left: -10px;
+  top: 60px;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #10b2e7;
+}
+.testimonials .author-message .speech-bubble .source {
+  margin-top: 30px;
+}
+.testimonials .author-message .speech-bubble .source a {
+  color: #074f66;
+}
+.testimonials .author-message .speech-bubble .source .title {
+  color: #0c86ae;
+}
 /* ======= Docs Section ======= */
 .docs {
-  padding: 80px 0;
+  padding-top: 60px;
   background: #f5f5f5;
 }
 .docs .title {
@@ -358,15 +429,28 @@ pre code {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
+.docs .container {
+  max-width: 1000px;
+}
 /* ======= License Section ======= */
 .license {
   padding: 80px 0;
-  background: #f5f5f5;
+  background: #074f66;
+  box-shadow: 0px 0px 30px #555;
+  color: #f5f5f5;
+}
+.license .btn-cta-primary {
+  background: #17baef;
+}
+.license .btn-cta-primary:hover {
+  background: #0fabdd;
+  border: 1px solid #053c4e;
+  color: #fff;
 }
 .license .title {
   margin-top: 0;
   margin-bottom: 60px;
-  color: #074f66;
+  color: #f5f5f5;
 }
 .license .license-inner {
   max-width: 800px;
@@ -386,6 +470,14 @@ pre code {
   max-width: 800px;
   margin: 0 auto;
 }
+.license .highlight {
+  color: #eebf3f;
+}
+.license .cite {
+  margin-left: 40px;
+  margin-right: 40px;
+  color: #25bef0;
+}
 .license .cta-container {
   max-width: 540px;
   margin: 0 auto;
@@ -399,8 +491,12 @@ pre code {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
+.license .cta-container .btn {
+  width: 100%;
+  margin-top: 20px;
+}
 .license .cta-container .speech-bubble {
-  background: #d6f3fc;
+  background: #f5f5f5;
   color: #074f66;
   padding: 30px;
   margin-bottom: 30px;
@@ -425,7 +521,7 @@ pre code {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #d6f3fc;
+  border-top: 10px solid #f5f5f5;
 }
 .license .cta-container .icon-holder {
   margin-bottom: 15px;
