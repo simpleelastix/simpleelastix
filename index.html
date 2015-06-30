@@ -148,7 +148,7 @@
     <section id="about" class="about section">
         <div class="container">
             <h2 class="title text-center">What is SimpleElastix?</h2>
-            <p class="intro text-center">SimpleElastix is an image processing library that makes state-of-the-art medical image registration really easy to do. With SimpleElastix you can access fast C++ registration algorithms from your favorite language like Python, Ruby, Java and R.</p>
+            <p class="intro text-center">SimpleElastix is a fork of SimpleITK that integrates the elastix C++ image registration library. This makes state-of-the-art medical image registration really easy to do in languages like Python, Java, Ruby and R.</p>
             <div class="row">
                 <div class="item col-md-4 col-sm-6 col-xs-12">
                     <div class="icon-holder">
@@ -156,7 +156,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Designed For Researchers</h3>
-                        <p>A user-friendly API allows you to quickly prototype an application, write robust reusable components and let SimpleElastix handle the low-level computation.</p>
+                        <p>A user-friendly API facilitates rapid prototyping, reusable components and reduces the overhead if processing large data sets.</p>
                     </div><!--//content-->
                 </div><!--//item-->
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -176,17 +176,16 @@
                         <h3 class="sub-title">Powerful</h3>
                         <p>Efficient multi-threaded C++ components produces fast results and accelerates development. Component parameters can be tuned for even more speed.</p>
                     </div><!--//content-->
-                </div><!--//item-->           
-                <div class="clearfix visible-md"></div>    
+                </div><!--//item-->              
                 <div class="item col-md-4 col-sm-6 col-xs-12">
                     <div class="icon-holder">
                         <i class="fa fa-sliders"></i>
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Parameter-driven Configuration</h3>
-                        <p>A parameter map interface makes it easy to configure registration components. Trying out different transforms, metrics and optimizers etc. is as easy as setting variables.</p>
+                        <p>A parameter map interface makes it easy to configure registration components. Try out different transforms, metrics and optimizers by setting string variables.</p>
                     </div><!--//content-->
-                </div><!--//item-->                
+                </div><!--//item-->               
                 <div class="item col-md-4 col-sm-6 col-xs-12">
                     <div class="icon-holder">
                         <i class="fa fa-dashboard"></i>
@@ -202,38 +201,58 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Easy To Extend</h3>
-                        <p>Elastix allows you to easily write your own transforms, metrics, optimizers etc. and call your own C++ code in any of the supported languages. </p>
+                        <p>Write your own transforms, metrics and optimizers in elastix and use SimpleElastix to call your C++ code in any of the supported languages.</p>
                     </div><!--//content-->
                 </div><!--//item-->               
-            </div><!--//row-->            
+            </div><!--//row-->
+           
         </div><!--//container-->
     </section><!--//about-->
 
-    <!-- ******DOCS****** --> 
+    <section class="testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-offset-3 col-xs-12">
+                    <div class="author-message">                      
+                        <div class="profile">
+                            <img class="img-responsive person" src="assets/images/fabien.png" alt="Go to my website" />
+                            <a href="http://www.ics-mci.fr" alt="ICS" target="_blank"><img class="img-responsive institution" src="assets/images/ics.png" alt="www.ics-mci.fr" /></a>
+                        </div><!--//profile-->
+                        <div class="speech-bubble">
+                            <p>SimpleElastix is exactly what I was looking for, combining the power of elastix and the ease of use of SimpleITK. I can integrate it flawlessly into my Python scripts.</p>
+                            <p><i>Fabien Pertuy, Research Engineer, <a href="http://www.ics-mci.fr" alt="ICS" target="_blank">Institut Clinique de la Souris</i></a></p>
+                        </div><!--//speech-bubble-->                        
+                    </div><!--//author-message-->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="documentation" class="docs section">
         <div class="container">
-            <div class="docs-inner">
-            <h2 class="title text-center">Documentation</h2>
             <div class="block">
+                <h2 class="title text-center">Documentation</h2>
+            </div>
+            <div class="block row">
                 <p class="btns text-center">
                     <a class="btn btn-cta-primary" href="https://simpleelastix.readthedocs.org" target="_blank">HTML Documentation</a>
                     <a class="btn btn-cta-secondary" href="http://media.readthedocs.org/pdf/simpleelastix/latest/simpleelastix.pdf" target="_blank">PDF Documentation</a>
                 </p>
-            </div>          
+            </div> 
             <div class="block">
                 <h3 class="sub-title text-center">Example 1: A Single Line of Code</h3>
-                <p>With SimpleElastix it is dead simple to align images of different patients. Depending on the complexity of your problem, you can often register images with a single function call (in this case Python).</p>
-
-                <div class="code-block">
-                    <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
-                    <pre><code class="language-python">
+                <p>With SimpleElastix it is dead simple to align images of different patients. Depending on the complexity of your problem, you can often register images with a single function call since elastix uses a multi-resolution strategy with Adaptive Stochastic Sampling (Klein et al. 2009) and Transform Bending Energy regularisation (Klein &amp; Staring 2010) by default. The following is Python code.</p>
+            </div> 
+                    <div class="block">
+                        <div class="code-block">
+                            <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                            <pre><code class="language-python">
  >>> fixedImage = SimpleITK.ReadImage("fixedImage.nii")
  >>> movingImage = SimpleITK.ReadImage("movingImage.nii")
  >>> resultImage = SimpleITK.Elastix(fixedImage, movingImage, "nonrigid")
-                     </code></pre>
-                </div><!--//code-block-->
-            </div><!--//block-->
-            
+                             </code></pre>
+                        </div><!--//code-block-->
+                    </div><!--//block-->
             <div class="block">
                 <h3 class="sub-title text-center">Example 2: Robust Initialization</h3>
                 <p>Difficult registration problems often need initialization to account for global translation, scaling and rotation prior to non-rigid registration. You can pass a vector of configuration objects (which we refer to as "Parameter Maps") and have elastix run registrations sequentially using output of one registration as input for the next.</p>
@@ -241,35 +260,70 @@
                     <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                     <pre>
     <code class="language-python">
- >>> parameterMapList = sitk.ParameterMapList()
- >>> parameterMapList.append(sitk.GetDefaultParameterMap("affine"))
- >>> parameterMapList.append(sitk.GetDefaultParameterMap("nonrigid"))
+ >>> parameterMapList = SimpleITK.ParameterMapList()
+ >>> parameterMapList.append(SimpleITK.GetDefaultParameterMap("affine"))
+ >>> parameterMapList.append(SimpleITK.GetDefaultParameterMap("nonrigid"))
  >>> resultImage = sitk.Elastix(fixedImage, movingImage, parameterMapList)
     </code></pre>
-                </div><!--//code-block-->
+        </div><!--//code-block-->
             </div><!--//block-->
             
             <div class="block">
                 <h3 class="sub-title text-center">Example 3: Atlas-based Segmentation</h3>
-                <p>You can apply transformations to multiple images. For example, you can transform a label image to do atlas-based segmentation.</p>
+                <p>You can apply transformations to multiple images. For example, you can transform a label image for atlas-based segmentation.</p>
                 <div class="code-block">
                     <pre><code class="language-python">
  # Non-rigid registration
- selx = SimpleITK.SimpleElastix()
- selx.SetParameterMap(sitk.GetDefaultParameterMap())
- selx.SetFixedImage(fixedImage)
- selx.SetMovingImage(movingImage)
- selx.Execute()
+ elastix = SimpleITK.SimpleElastix()
+ elastix.SetParameterMap(sitk.GetDefaultParameterMap())
+ elastix.SetFixedImage(fixedImage)
+ elastix.SetMovingImage(movingImage)
+ elastix.Execute()
 
  # We turn off interpolation for labels
- parameterMap = selx.GetTransformParameterMap()
+ parameterMap = elastix.GetTransformParameterMap()
  parameterMap[0]["ResampleInterpolator"] = ["FinalNearestNeighborInterpolator"]
 
  # Warp label image using transform from above
  resultLabel = SimpleITK.Transformix(labelImage, parameterMap)
                     </code></pre>
                 </div><!--//code-block-->
-            </div><!--//block-->   
+            </div><!--//block-->              
+            <div class="block">
+                <h3 class="sub-title text-center">Example 4: Configuring Registration Components</h3>
+                <p>Elastix introduced the concept of a "parameter map" to specify registration components. A parameter map is a collection of key-value pairs that completely configure the algorithms and any settings they might require. Here is a couple of examples.</p>
+                <div class="code-block">
+                    <pre><code class="language-python">
+ parameterMap = SimpleITK.GetDefaultParameterMap("nonrigid")
+
+ # Want to monitor registration convergence?
+ parameterMap["WriteResultImageEachIteration"] = ["true"]
+
+ # Want to use another optimizer?
+ parameterMap["Optimizer"] = ["QuasiNewtonLBFGS"]
+
+ # Want a more smooth deformation field?
+ parameterMap["Metric1Weight"] = ["2.0"]
+
+ # Want a more dense b-spline deformation field (mm)?
+ parameterMap["FinalGridSpacingInPhysicalUnits"] = ["4.0"]
+
+ # Want to run registration faster?
+ parameterMap["NumberOfResolutions"] = ["1"]
+ parameterMap["NumberOfIterations"] = ["128"]
+ parameterMap["NumberOfSamples"] = ["1024"]
+
+ # Want to write smaller images to disk?
+ parameterMap["ResultImagePixelType"] = ["short"]
+
+ # Want the raw b-spline parameters?
+ bsplineParameters = elastix.GetTransformParameterMap()[0]["TransformParameters"]
+
+ # Run registration with new parameters
+ resultImage = SimpleITK.Elastix(fixedImage, movingImage, parameterMap)
+                    </code></pre>
+                </div><!--//code-block-->
+            </div><!--//block--> 
             <div class="block">
                 <h3 class="sub-title text-center">Full Documentation</h3>
                 <p>The full documentation describes how to install SimpleElastix on Linux, Mac OS X and Windows. You will also find an extensive introduction to medical image registration and the different registration components available in SimpleElastix along with complete hands-on examples.</p>
@@ -279,48 +333,54 @@
                     <a class="btn btn-cta-primary" href="https://simpleelastix.readthedocs.org" target="_blank">More on readthedocs.org</a>
                 </p>
             </div><!--//block--> 
-            </div><!--//docs-inner-->         
-        </div><!--//container-->
-    </section><!--//docs-->
+        </div>
+    </section>
     
     <!-- ******LICENSE****** --> 
     <section id="download" class="license section">
-        <div class="container">
-            <div class="license-inner">
-            <h2 class="title text-center">Download</h2>
-                <div class="block">
-                    <p class="btns text-center">
-                        <a class="btn btn-cta-primary" href="https://github.com/kaspermarstal/SimpleElastix" target="_blank"><i class="fa fa-github"></i> Clone on Github</a>
-                        <a class="btn btn-cta-secondary" href="https://github.com/kaspermarstal/SimpleElastix/archive/v0.9.0-SimpleElastix.zip" target="_blank"><i class="fa fa-download"></i> Source code (zip)</a>
-                        <a class="btn btn-cta-secondary" href="https://github.com/kaspermarstal/SimpleElastix/archive/v0.9.0-SimpleElastix.tar.gz" target="_blank"><i class="fa fa-download"></i> Source code (tar.gz)</a>
-                    </p>
-                </div> 
-                <div class="cta-container">
-                    <p>See documentation for an <a href="https://simpleelastix.readthedocs.org/GettingStarted.html" target="_blank">installation guide</a>. SimpleElastix is developed and maintained by <a href="https://kaspermarstal.github.io/" target="_blank">Kasper Marstal</a> and released under the permissive Apache 2.0 License. You are free to use SimpleElastix for any activity, including commercial. If you use SimpleElastix for academic work, I would be grateful if you cited the project:</p>
-                    <p>
-                        <i>Kasper Marstal, SimpleElastix (2015), Github repository: https://github.com/kaspermarstal/SimpleElastix, DOI: 10.5281/zenodo.19049</i>
-                    </p>
-                    <p>Thank you!</p>
+        <h2 class="title text-center">Download</h2>
+            <div class="cta-container">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <h2 class="highlight">Source code</h2>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 text-center">
+                        <a class="btn btn-cta-secondary" href="https://github.com/kaspermarstal/SimpleElastix/archive/v0.9.0-SimpleElastix.zip" target="_blank"><i class="fa fa-download"></i> ZIP</a>
+                        <a class="btn btn-cta-secondary" href="https://github.com/kaspermarstal/SimpleElastix/archive/v0.9.0-SimpleElastix.tar.gz" target="_blank"><i class="fa fa-download"></i> TAR.GZ</a>
+                    </div>
                 </div>
-                <div class="cta-container">
-                    <div class="speech-bubble">                    
-                        <p class="intro">If you find SimpleElastix useful for your work you can support further development by donating to this project!</p>
-                        <div class="icon-holder  text-center"><i class="fa fa-smile-o"></i></div>
-                    </div><!--//speech-bubble-->
-                    <div class="btn-container  text-center">         
-                        <!--PayPal generated code starts-->
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                            <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="BJ3H8U6PKSN3U">
-                            <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
-                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                        </form>
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <h2></i> Git clone</h2>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 text-center">
+                        <a class="btn btn-cta-primary" href="https://github.com/kaspermarstal/SimpleElastix" target="_blank"><i class="fa fa-github"></i> Go to Github</a>
+                    </div>
+                </div>
+            </div>
+            <!--
+            <div class="cta-container">
+                <p>See documentation for an <a href="https://simpleelastix.readthedocs.org/GettingStarted.html" target="_blank">installation guide</a>. SimpleElastix is developed and maintained by <a href="https://kaspermarstal.github.io/" target="_blank">Kasper Marstal</a> and released under the permissive Apache 2.0 License. You are free to use SimpleElastix for any activity, including commercial. If you use SimpleElastix for academic work, 
+            </div>-->
+            <div class="cta-container">
+                <div class="speech-bubble">                    
+                    <p>If you find SimpleElastix useful for your work you can cite</p>
+                    <p class="cite"><i>Kasper Marstal, SimpleElastix (2015), Github repository: https://github.com/kaspermarstal/SimpleElastix, DOI: 10.5281/zenodo.19049</i></p>
+                    <p>or support further development by donating to this project!</p>
+                    <div class="icon-holder  text-center"><i class="fa fa-smile-o"></i></div>
+                </div><!--//speech-bubble-->
+                <div class="btn-container  text-center">         
+                    <!--PayPal generated code starts-->
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="BJ3H8U6PKSN3U">
+                        <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
 <!--//PayPal generated code ends-->                 
-                    </div><!--//btn-container-->
-                </div><!--//cta-container-->
-            </div><!--//license-inner-->
-        </div><!--//container-->
-    </section><!--//how-->
+                </div><!--//btn-container-->
+            </div><!--//cta-container-->
+    </section>
     
     <!-- ******CONTACT****** --> 
     <section id="contact" class="contact section has-pattern">
