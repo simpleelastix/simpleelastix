@@ -156,7 +156,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Designed For Researchers</h3>
-                        <p>A user-friendly API facilitates rapid prototyping, reusable components and reduces the overhead if processing large data sets.</p>
+                        <p>A user-friendly API facilitates rapid prototyping, reusable components and reduces overhead for large data sets.</p>
                     </div><!--//content-->
                 </div><!--//item-->
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -174,7 +174,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Powerful</h3>
-                        <p>Efficient multi-threaded C++ components produces fast results and accelerates development. Component parameters can be tuned for even more speed.</p>
+                        <p>Efficient multi-threaded C++ components produces fast results and accelerates development. Component can be tuned for even more speed.</p>
                     </div><!--//content-->
                 </div><!--//item-->              
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -183,7 +183,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Parameter-driven Configuration</h3>
-                        <p>A parameter map interface makes it easy to configure registration components. Try out different transforms, metrics and optimizers by setting string variables.</p>
+                        <p>A parameter map interface makes it easy to configure registration components. Try out different transforms, metrics and optimizers by means of scripting.</p>
                     </div><!--//content-->
                 </div><!--//item-->               
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -212,7 +212,7 @@
     <section class="testimonials">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-offset-3 col-xs-12">
+                <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
                     <div class="author-message">                      
                         <div class="profile">
                             <img class="img-responsive person" src="assets/images/fabien.png" alt="Go to my website" />
@@ -240,17 +240,15 @@
                 </p>
             </div> 
             <div class="block">
-                <h3 class="sub-title text-center">Example 1: A Single Line of Code</h3>
-                <p>With SimpleElastix it is dead simple to align images of different patients. Depending on the complexity of your problem, you can often register images with a single function call since elastix uses a multi-resolution strategy with Adaptive Stochastic Sampling (Klein et al. 2009) and Transform Bending Energy regularisation (Klein &amp; Staring 2010) by default. The following is Python code.</p>
+                <h3 class="sub-title text-center">Example 1: A Line of Code</h3>
+                <p>With SimpleElastix it is dead simple to align images of different patients. Elastix uses a multi-resolution strategy with Adaptive Stochastic Sampling (Klein et al. 2009) and Transform Bending Energy regularisation (Klein &amp; Staring 2010) by default. Depending on the complexity of your problem, you can often register images with a single function call. The following is Python code.</p>
             </div> 
                     <div class="block">
                         <div class="code-block">
                             <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
-                            <pre><code class="language-python">
- >>> fixedImage = SimpleITK.ReadImage("fixedImage.nii")
+                            <pre><code class="language-python"> >>> fixedImage = SimpleITK.ReadImage("fixedImage.nii")
  >>> movingImage = SimpleITK.ReadImage("movingImage.nii")
- >>> resultImage = SimpleITK.Elastix(fixedImage, movingImage, "nonrigid")
-                             </code></pre>
+ >>> resultImage = SimpleITK.Elastix(fixedImage, movingImage, "nonrigid")</code></pre>
                         </div><!--//code-block-->
                     </div><!--//block-->
             <div class="block">
@@ -258,13 +256,10 @@
                 <p>Difficult registration problems often need initialization to account for global translation, scaling and rotation prior to non-rigid registration. You can pass a vector of configuration objects (which we refer to as "Parameter Maps") and have elastix run registrations sequentially using output of one registration as input for the next.</p>
                 <div class="code-block">
                     <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
-                    <pre>
-    <code class="language-python">
- >>> parameterMapList = SimpleITK.ParameterMapList()
- >>> parameterMapList.append(SimpleITK.GetDefaultParameterMap("affine"))
- >>> parameterMapList.append(SimpleITK.GetDefaultParameterMap("nonrigid"))
- >>> resultImage = sitk.Elastix(fixedImage, movingImage, parameterMapList)
-    </code></pre>
+                    <pre><code class="language-python"> >>> parameterMapList = SimpleITK.ParameterMapList()
+ >>> parameterMapList.push_back(SimpleITK.GetDefaultParameterMap("affine"))
+ >>> parameterMapList.push_back(SimpleITK.GetDefaultParameterMap("nonrigid"))
+ >>> resultImage = sitk.Elastix(fixedImage, movingImage, parameterMapList)</code></pre>
         </div><!--//code-block-->
             </div><!--//block-->
             
@@ -272,8 +267,7 @@
                 <h3 class="sub-title text-center">Example 3: Atlas-based Segmentation</h3>
                 <p>You can apply transformations to multiple images. For example, you can transform a label image for atlas-based segmentation.</p>
                 <div class="code-block">
-                    <pre><code class="language-python">
- # Non-rigid registration
+                    <pre><code class="language-python"> # Non-rigid registration
  elastix = SimpleITK.SimpleElastix()
  elastix.SetParameterMap(sitk.GetDefaultParameterMap())
  elastix.SetFixedImage(fixedImage)
@@ -285,16 +279,14 @@
  parameterMap[0]["ResampleInterpolator"] = ["FinalNearestNeighborInterpolator"]
 
  # Warp label image using transform from above
- resultLabel = SimpleITK.Transformix(labelImage, parameterMap)
-                    </code></pre>
+ resultLabel = SimpleITK.Transformix(labelImage, parameterMap)</code></pre>
                 </div><!--//code-block-->
             </div><!--//block-->              
             <div class="block">
                 <h3 class="sub-title text-center">Example 4: Configuring Registration Components</h3>
-                <p>Elastix introduced the concept of a "parameter map" to specify registration components. A parameter map is a collection of key-value pairs that completely configure the algorithms and any settings they might require. Here is a couple of examples.</p>
+                <p>Elastix introduced the concept of a "parameter map" to specify registration components. A parameter map is a collection of key-value pairs that completely configure the registration procedure. Here are a couple of examples.</p>
                 <div class="code-block">
-                    <pre><code class="language-python">
- parameterMap = SimpleITK.GetDefaultParameterMap("nonrigid")
+                    <pre><code class="language-python"> parameterMap = SimpleITK.GetDefaultParameterMap("nonrigid")
 
  # Want to monitor registration convergence?
  parameterMap["WriteResultImageEachIteration"] = ["true"]
@@ -308,20 +300,13 @@
  # Want a more dense b-spline deformation field (mm)?
  parameterMap["FinalGridSpacingInPhysicalUnits"] = ["4.0"]
 
- # Want to run registration faster?
- parameterMap["NumberOfResolutions"] = ["1"]
- parameterMap["NumberOfIterations"] = ["128"]
- parameterMap["NumberOfSamples"] = ["1024"]
-
- # Want to write smaller images to disk?
- parameterMap["ResultImagePixelType"] = ["short"]
+ # Want to make registration more robust?
+ parameterMap["NumberOfResolutions"] = ["6"]
+ parameterMap["NumberOfIterations"] = ["1024"]
+ parameterMap["NumberOfSamples"] = ["8192"]
 
  # Want the raw b-spline parameters?
- bsplineParameters = elastix.GetTransformParameterMap()[0]["TransformParameters"]
-
- # Run registration with new parameters
- resultImage = SimpleITK.Elastix(fixedImage, movingImage, parameterMap)
-                    </code></pre>
+ bsplineParameters = elastix.GetTransformParameterMap()[0]["TransformParameters"]</code></pre>
                 </div><!--//code-block-->
             </div><!--//block--> 
             <div class="block">
