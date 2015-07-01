@@ -239,7 +239,7 @@ pre code {
   margin-left: auto;
   margin-top: 30px;
   background-color: #000;
-  box-shadow: 0px 0px 20px #000;
+  box-shadow: 0px 0px 20px #333;
 }
 .promo .lang-icon-container {
   padding-top: 90px;
@@ -338,11 +338,13 @@ pre code {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  height: 100px;
 }
 .testimonials .author-message .profile .institution {
   background: #fff;
-  width: 100%;
+  width: 100px;
   margin-top: 10px;
+  box-shadow: 0px 0px 10px #0c86ae;
 }
 .testimonials .author-message .speech-bubble {
   margin-left: 155px;
@@ -432,53 +434,39 @@ pre code {
 .docs .container {
   max-width: 1000px;
 }
-/* ======= License Section ======= */
-.license {
+/* ======= Download Section ======= */
+.download {
   padding: 80px 0;
   background: #074f66;
   box-shadow: 0px 0px 30px #444;
   color: #f5f5f5;
 }
-.license .btn-cta-primary {
+.download .btn-cta-primary {
   background: #17baef;
 }
-.license .btn-cta-primary:hover {
+.download .btn-cta-primary:hover {
   background: #0fabdd;
   border: 1px solid #053c4e;
   color: #fff;
 }
-.license .title {
+.download .title {
   margin-top: 0;
   margin-bottom: 60px;
   color: #f5f5f5;
 }
-.license .license-inner {
-  max-width: 800px;
-  background: #fff;
-  padding: 30px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  margin: 0 auto;
-}
-.license .info {
+.download .info {
   max-width: 800px;
   margin: 0 auto;
 }
-.license .highlight {
+.download .highlight {
   color: #eebf3f;
 }
-.license .cite {
+.download .cite {
   margin-left: 40px;
   margin-right: 40px;
   color: #25bef0;
 }
-.license .cta-container {
+.download .cta-container {
   max-width: 540px;
   margin: 0 auto;
   margin-top: 60px;
@@ -491,11 +479,11 @@ pre code {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-.license .cta-container .btn {
+.download .cta-container .btn {
   width: 100%;
   margin-top: 20px;
 }
-.license .cta-container .speech-bubble {
+.download .cta-container .speech-bubble {
   background: #f5f5f5;
   color: #074f66;
   padding: 30px;
@@ -510,7 +498,7 @@ pre code {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-.license .cta-container .speech-bubble:after {
+.download .cta-container .speech-bubble:after {
   position: absolute;
   left: 50%;
   bottom: -10px;
@@ -523,13 +511,13 @@ pre code {
   border-right: 10px solid transparent;
   border-top: 10px solid #f5f5f5;
 }
-.license .cta-container .icon-holder {
+.download .cta-container .icon-holder {
   margin-bottom: 15px;
 }
-.license .cta-container .icon-holder .fa {
+.download .cta-container .icon-holder .fa {
   font-size: 56px;
 }
-.license .cta-container .intro {
+.download .cta-container .intro {
   margin-bottom: 30px;
 }
 /* ======= Contact Section ======= */
@@ -551,10 +539,10 @@ pre code {
   margin-bottom: 60px;
 }
 .contact a {
-  color: #074f66;
+  color: #042a36;
 }
 .contact a:hover {
-  color: #042a36;
+  color: #074f66;
 }
 .contact .author-message {
   position: relative;
@@ -597,30 +585,6 @@ pre code {
   font-size: 16px;
   margin-top: 0;
   margin-bottom: 30px;
-}
-.contact .author-message .speech-bubble a {
-  color: #fff;
-}
-.contact .author-message .speech-bubble:after {
-  position: absolute;
-  left: -10px;
-  top: 60px;
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-right: 10px solid #10b2e7;
-}
-.contact .author-message .speech-bubble .source {
-  margin-top: 30px;
-}
-.contact .author-message .speech-bubble .source a {
-  color: #074f66;
-}
-.contact .author-message .speech-bubble .source .title {
-  color: #0c86ae;
 }
 .contact .info .sub-title {
   color: #0e98c5;
