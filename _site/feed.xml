@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Your awesome title</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <title>SimpleElastix</title>
+    <description>SimpleElastix is a fork of SimpleITK that integrates the elastix  C++ image registration library. This makes state-of-the-art  medical image registration really easy to do in languages like  Python, Java, Ruby and R.
 </description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 01 Jul 2015 12:00:28 +0200</pubDate>
-    <lastBuildDate>Wed, 01 Jul 2015 12:00:28 +0200</lastBuildDate>
+    <link>http://simpleelastix.github.io/</link>
+    <atom:link href="http://simpleelastix.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 02 Jul 2015 00:32:52 +0200</pubDate>
+    <lastBuildDate>Thu, 02 Jul 2015 00:32:52 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Fri, 26 Jun 2015 00:33:33 +0200</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/06/26/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/06/26/welcome-to-jekyll.html</guid>
+        <link>http://simpleelastix.github.io/jekyll/update/2015/06/26/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://simpleelastix.github.io/jekyll/update/2015/06/26/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>

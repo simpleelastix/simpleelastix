@@ -237,7 +237,7 @@ pre code {
         margin-left: auto;
         margin-top: 30px;
         background-color: #000;
-        box-shadow: 0px 0px 20px #000;
+        box-shadow: 0px 0px 20px #333;
     }
 
     .lang-icon-container {
@@ -338,12 +338,14 @@ pre code {
         height: 100px;
         .person {
             .border-radius(50%);
+            height: 100px;
         }
 
         .institution {
             background: #fff;
-            width: 100%;
+            width: 100px;
             margin-top: 10px;
+            box-shadow: 0px 0px 10px darken(@color, 15%);;
         }
     }
     .speech-bubble {
@@ -421,8 +423,8 @@ pre code {
     }
 }
 
-/* ======= License Section ======= */
-.license {   
+/* ======= Download Section ======= */
+.download {   
     padding: 80px 0;
     background: darken(@color, 30%);
     box-shadow: 0px 0px 30px #444;
@@ -441,14 +443,6 @@ pre code {
         margin-top: 0;
         margin-bottom: 60px;
         color: @smoky-white;
-    }
-    .license-inner {
-        max-width: 800px;
-        background: #fff;
-        padding: 30px;
-        .border-radius(4px);
-        margin: 0 auto;
-        
     }
     .info {
         max-width: 800px;
@@ -527,9 +521,9 @@ pre code {
         margin-bottom: 60px;
     }
     a {
-        color: darken(@color, 30%);
+        color: darken(@color, 40%);
         &:hover {
-            color: darken(@color, 40%);
+            color: darken(@color, 30%);
         }
     }
     .author-message {
@@ -558,33 +552,6 @@ pre code {
                 margin-top: 0;
                 margin-bottom: 30px;
             }
-            
-            a {
-                color: #fff;
-            }
-            
-            &:after {
-                position: absolute;
-                left: -10px;
-                top: 60px;
-                content: "";
-                display: inline-block;
-                width: 0; 
-            	height: 0; 
-            	border-top: 10px solid transparent;
-            	border-bottom: 10px solid transparent;            	
-            	border-right: 10px solid darken(@color, 3%);
-            }
-            .source {
-                margin-top: 30px;
-                a {
-                    color: darken(@color, 30%);
-                }
-                .title {
-                    color: darken(@color, 15%);
-                }
-            }
-            
         }
     }
     

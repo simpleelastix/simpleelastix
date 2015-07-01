@@ -93,7 +93,7 @@
                         </video>
                         <div class="carousel-caption">   
                             <h2>Simple<span class="highlight">Elastix</span></h2>
-                            <p>Image Registration Library</p>
+                            <p>Medical Image Registration Library</p>
                         </div>
                     </div>
                     <div class="item">
@@ -136,12 +136,6 @@
                 <li><a href="http://dx.doi.org/10.5281/zenodo.19049"><img src="https://zenodo.org/badge/doi/10.5281/zenodo.19049.svg" alt="10.5281/zenodo.19049"></a></li>
             </ul><!--//meta-->
         </div><!--//container-->
-        <!--<div class="social-media">
-            <div class="social-media-inner container text-center">
-                    <iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-                    <iframe src="https://ghbtns.com/github-btn.html?user=mdo&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="220px" height="60px"></iframe>
-            </div>
-        </div>-->
     </section><!--//promo-->
     
     <!-- ******ABOUT****** --> 
@@ -165,7 +159,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Multilingual</h3>
-                        <p>Use your favorite programming language. SimpleElastix comes with native bindings for C++, Python, Java, R, Ruby, Octave, Lua, Tcl and C#.</p>
+                        <p>SimpleElastix comes with native bindings for C++, Python, Java, R, Ruby, Octave, Lua, Tcl and C# so you can continue using your favorite tools.</p>
                     </div><!--//content-->
                 </div><!--//item-->
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -174,7 +168,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Powerful</h3>
-                        <p>Efficient multi-threaded C++ components produces fast results and accelerates development. Component can be tuned for even more speed.</p>
+                        <p>Get fast results and accelerate development with multi-threaded C++ components. Individual components can be tuned for even more speed.</p>
                     </div><!--//content-->
                 </div><!--//item-->              
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -212,15 +206,27 @@
     <section class="testimonials">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+                <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="author-message">                      
                         <div class="profile">
-                            <img class="img-responsive person" src="assets/images/fabien.png" alt="Go to my website" />
-                            <a href="http://www.ics-mci.fr" alt="ICS" target="_blank"><img class="img-responsive institution" src="assets/images/ics.png" alt="www.ics-mci.fr" /></a>
+                            <img class="img-responsive person" src="assets/images/fabien.png" alt="Fabien Pertuy" />
+                            <a href="http://www.ics-mci.fr" alt="ICS" target="_blank"><img class="img-responsive institution" src="assets/images/ics.png" alt="Institut Clinique de la Souris" /></a>
                         </div><!--//profile-->
                         <div class="speech-bubble">
                             <p>SimpleElastix is exactly what I was looking for, combining the power of elastix and the ease of use of SimpleITK. I can integrate it flawlessly into my Python scripts.</p>
                             <p><i>Fabien Pertuy, Research Engineer, <a href="http://www.ics-mci.fr" alt="ICS" target="_blank">Institut Clinique de la Souris</i></a></p>
+                        </div><!--//speech-bubble-->                        
+                    </div><!--//author-message-->
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="author-message">                      
+                        <div class="profile">
+                            <img class="img-responsive person" src="assets/images/philip.png" alt="Philip Hansen" />
+                            <a href="www.frederiksberghospital.dk" alt="ICS" target="_blank"><img class="img-responsive institution" src="assets/images/frb.jpg" alt="Frederiksberg Hospital" style="padding: 2px" /></a>
+                        </div><!--//profile-->
+                        <div class="speech-bubble">
+                            <p>We aim to advance understanding of anatomical changes in the human foot induced by weightbearing. SimpleElastix allowed our team to build a digital 3D model to visualize tarsal bone movements in very little time.</p>
+                            <p><i>Philip Hansen, MD, PhD <a href="http://www.frederiksberghospital.dk" alt="ICS" target="_blank">Frederiksberg Hospital</i></a></p>
                         </div><!--//speech-bubble-->                        
                     </div><!--//author-message-->
                 </div>
@@ -253,13 +259,13 @@
                     </div><!--//block-->
             <div class="block">
                 <h3 class="sub-title text-center">Example 2: Robust Initialization</h3>
-                <p>Difficult registration problems often need initialization to account for global translation, scaling and rotation prior to non-rigid registration. You can pass a vector of configuration objects (which we refer to as "Parameter Maps") and have elastix run registrations sequentially using output of one registration as input for the next.</p>
+                <p>Difficult registration problems often need initialization to account for global translation, scaling and rotation prior to non-rigid registration. You can pass a list of configuration objects (which we refer to as "parameter maps") and have elastix run registrations sequentially using output of one registration as input for the next.</p>
                 <div class="code-block">
                     <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
                     <pre><code class="language-python"> >>> parameterMapList = SimpleITK.ParameterMapList()
  >>> parameterMapList.push_back(SimpleITK.GetDefaultParameterMap("affine"))
  >>> parameterMapList.push_back(SimpleITK.GetDefaultParameterMap("nonrigid"))
- >>> resultImage = sitk.Elastix(fixedImage, movingImage, parameterMapList)</code></pre>
+ >>> resultImage = SimpleITK.Elastix(fixedImage, movingImage, parameterMapList)</code></pre>
         </div><!--//code-block-->
             </div><!--//block-->
             
@@ -269,7 +275,7 @@
                 <div class="code-block">
                     <pre><code class="language-python"> # Non-rigid registration
  elastix = SimpleITK.SimpleElastix()
- elastix.SetParameterMap(sitk.GetDefaultParameterMap())
+ elastix.SetParameterMap(SimpleITK.GetDefaultParameterMap())
  elastix.SetFixedImage(fixedImage)
  elastix.SetMovingImage(movingImage)
  elastix.Execute()
@@ -284,7 +290,7 @@
             </div><!--//block-->              
             <div class="block">
                 <h3 class="sub-title text-center">Example 4: Configuring Registration Components</h3>
-                <p>Elastix introduced the concept of a "parameter map" to specify registration components. A parameter map is a collection of key-value pairs that completely configure the registration procedure. Here are a couple of examples.</p>
+                <p>Elastix introduced the concept of a "parameter map" to specify registration components. A parameter map is a collection of key-value pairs that configure the registration procedure. Here are a couple of examples.</p>
                 <div class="code-block">
                     <pre><code class="language-python"> parameterMap = SimpleITK.GetDefaultParameterMap("nonrigid")
 
@@ -311,7 +317,7 @@
             </div><!--//block--> 
             <div class="block">
                 <h3 class="sub-title text-center">Full Documentation</h3>
-                <p>The full documentation describes how to install SimpleElastix on Linux, Mac OS X and Windows. You will also find an extensive introduction to medical image registration and the different registration components available in SimpleElastix along with complete hands-on examples.</p>
+                <p>The full documentation describes how to install SimpleElastix on Linux, Mac OS X and Windows. You will also find an extensive introduction to medical image registration, the different registration components and hands-on examples.</p>
             </div><!--//block-->
             <div class="block">
                 <p class="text-center">
@@ -321,8 +327,8 @@
         </div>
     </section>
     
-    <!-- ******LICENSE****** --> 
-    <section id="download" class="license section">
+    <!-- ******Download****** --> 
+    <section id="download" class="download section">
         <h2 class="title text-center">Download</h2>
             <div class="cta-container">
                 <div class="row">
@@ -343,14 +349,10 @@
                     </div>
                 </div>
             </div>
-            <!--
-            <div class="cta-container">
-                <p>See documentation for an <a href="https://simpleelastix.readthedocs.org/GettingStarted.html" target="_blank">installation guide</a>. SimpleElastix is developed and maintained by <a href="https://kaspermarstal.github.io/" target="_blank">Kasper Marstal</a> and released under the permissive Apache 2.0 License. You are free to use SimpleElastix for any activity, including commercial. If you use SimpleElastix for academic work, 
-            </div>-->
             <div class="cta-container">
                 <div class="speech-bubble">                    
                     <p>If you find SimpleElastix useful for your work you can cite</p>
-                    <p class="cite"><i>Kasper Marstal, SimpleElastix (2015), Github repository: https://github.com/kaspermarstal/SimpleElastix, DOI: 10.5281/zenodo.19049</i></p>
+                    <p class="cite"><i>Kasper Marstal, SimpleElastix, 2015, Github repository: https://github.com/kaspermarstal/SimpleElastix, DOI: 10.5281/zenodo.19049</i></p>
                     <p>or support further development by donating to this project!</p>
                     <div class="icon-holder  text-center"><i class="fa fa-smile-o"></i></div>
                 </div><!--//speech-bubble-->
@@ -378,9 +380,9 @@
                     </div><!--//profile-->
                     <div class="speech-bubble">
                         <h3 class="sub-title">I hope you find SimpleElastix useful in your work. </h3>
-                        <p>Feel free to get in touch if you have any questions or suggestions.
+                        <p>You will find my website at <a href="http://kaspermarstal.github.io" target="_blank" alt="Visit my website">kaspermarstal.github.io</a>. Feel free to get in touch if you have any questions or suggestions.</p>
                         <div class="source">
-                            <span class="name"><a href="https://kaspermarstal.github.io" target="_blank">Kasper Marstal</a></span>
+                            <span class="name">Kasper Marstal</span>
                             <br />
                             <span class="title">PhD Student, M.Sc. Eng., Medicin &amp; Technology</span>
                         </div><!--//source-->
@@ -390,7 +392,7 @@
                 <div class="info text-center">
                     <h4 class="sub-title">Get Connected</h4>
                     <ul class="social-icons list-inline">
-                        <li><a href="https://github.com/kaspermarstal/SimpleElastix" target="_blank"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://github.com/kaspermarstal" target="_blank"><i class="fa fa-github"></i></a></li>
                         <li><a href="https://twitter.com/kaspermarstal" target="_blank"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="https://www.linkedin.com/in/kaspermarstal"><i class="fa fa-linkedin"></i></a></li>   
                         <li class="last"><a href="mailto:kaspermarstal@gmail.com"><i class="fa fa-envelope"></i></a></li>              
