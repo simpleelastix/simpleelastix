@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <!-- Plugins CSS -->    
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/prism/min/prism.css">
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -61,9 +61,10 @@
                     <ul class="nav navbar-nav">
                         <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
                         <li class="nav-item"><a class="scrollto" href="#about">About</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#documentation">Documentation</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#support">Support</a></li>   
                         <li class="nav-item"><a class="scrollto" href="#download">Download</a></li>                        
-                        <li class="nav-item last"><a class="scrollto" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="scrollto" href="#contact">Contact</a></li>
+                        <li class="nav-item last"><a href="https://simpleelastix.readthedocs.org/" target="_blank">Docs <i class="fa fa-external-link"></i></a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
@@ -73,46 +74,47 @@
     <!-- ******PROMO****** -->
     <section id="promo" class="promo section offset-header">
         <div class="container text-center">
-            <!--<h2 class="title">Simple<span class="highlight">Elastix</span></h2>-->
-            <!--<p class="intro">Image Registration Library</p>-->
-
-            <div id="header-carousel" class="carousel slide player" data-ride="carousel" data-interval="6000">
+            <h2 class="title">Simple<span class="highlight">Elastix</span></h2>
+            <p class="intro">Medical Image Registration Library</p>
+        </div><!--//container-->
+        <div class="container" style="height: 200px; margin-bottom: 30px;" >
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <ul class="keywords">
+                    <li class="keywords">State-of-the-art medical image registration with a couple of lines of code</li>
+                    <li class="keywords">Industry-standard implementation with <a class="citations" href="https://scholar.google.dk/scholar?cites=8050482836954489563&as_sdt=2005&sciodt=0,5&hl=en"> 700+ citations in the scientific litterature</a> </li>
+                    <li class="keywords">Available in C++, Python, Java, R, Ruby, Octave, C#, Lua, and Tcl</li>
+                </ul>
+            </div>
+            <div id="header-carousel" class="carousel slide player col-xs-12 col-sm-6 col-md-6 col-lg-6" data-ride="carousel" data-interval="5000" style="margin-bottom: 30px;">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
                     <li data-target="#header-carousel" data-slide-to="1"></li>
-                    <li data-target="#header-carousel" data-slide-to="2"></li>
                 </ol>
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <video width="100%" height="280px" autoplay loop>
+                        <video class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" autoplay loop>
                             <source src="assets/videos/video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
-                        </video>
+                        </video><!--
                         <div class="carousel-caption">   
                             <h2>Simple<span class="highlight">Elastix</span></h2>
                             <p>Medical Image Registration Library</p>
-                        </div>
+                        </div>-->
                     </div>
-                    <div class="item">
-                        <img src="assets/images/code.png" style="width: 70%; display: block; margin-left: auto; margin-right: auto; padding-top: 12%" />  
-                        <div class="carousel-caption">  
-                            <h2>Advanced algorithms. <span class="highlight">Simple API.</span></h2>
-                            <p>Multi-resolution, multi-metric, multi-threaded</p>
-                        </div>
-                    </div>
-                    <div class="item text-center lang-icon-container">
-                        <i class="devicon-cplusplus-plain colored lang-icon"></i>
-                        <i class="devicon-python-plain colored lang-icon"></i>
-                        <i class="devicon-java-plain colored lang-icon"></i>
-                        <i class="devicon-ruby-plain colored lang-icon"></i>
-                        <i class="devicon-csharp-plain colored lang-icon"></i>
-                        <div class="carousel-caption">
-                            <h2>One library. <span class="highlight">Nine languages.</span></h2>
-                            <p>Native bindings for C++, Python, Java, R, Ruby, Octave, Lua, Tcl and C#.</p>
-                        </div>
+                    <div class="item col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" style="padding-top: 40px;">
+                        <div class="block">
+                            <div class="code-block">
+                            <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                            <pre><code class="language-python line-numbers">import SimpleITK as sitk
+resultImage = sitk.Elastix(
+  sitk.ReadImage('fixedImage.nii'), 
+  sitk.ReadImage('fixedImage.nii')
+)</code></pre>
+                            </div><!--//code-block-->
+                        </div><!--//block-->
                     </div>
                 </div>
                 <!-- Left and right controls -->
@@ -125,14 +127,16 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-
+        </div>
+        <div style="clear: both"></div>
+        <div class="container text-center">
             <div class="btns">
-                <a class="btn btn-cta-secondary" class="scrollto" href="#download">Download</a>
                 <a class="btn btn-cta-primary" class="scrollto" href="#about">Tell me more!</a>
+                <a class="btn btn-cta-secondary" class="scrollto" href="#download">Download</a>
             </div>
             <ul class="meta list-inline">
-                <li><a href="https://github.com/kaspermarstal/SimpleElastix" target="_blank">View on GitHub</a></li>
-                <li><a href="https://simpleelastix.readthedocs.org/" target="_blank">Full Documentation</a></li>
+                <li><a href="https://github.com/kaspermarstal/SimpleElastix" target="_blank">Github repository</a></li>
+                <li><a href="https://simpleelastix.readthedocs.org/" target="_blank">Documentation</a></li>
                 <li><a href="http://dx.doi.org/10.5281/zenodo.19049"><img src="https://zenodo.org/badge/doi/10.5281/zenodo.19049.svg" alt="10.5281/zenodo.19049"></a></li>
             </ul><!--//meta-->
         </div><!--//container-->
@@ -149,8 +153,8 @@
                         <i class="fa fa-heart"></i>
                     </div>
                     <div class="content">
-                        <h3 class="sub-title">Designed For Researchers</h3>
-                        <p>A user-friendly API facilitates rapid prototyping, reusable components and reduces overhead for large data sets.</p>
+                        <h3 class="sub-title">Designed For Developers</h3>
+                        <p>A user-friendly API facilitates rapid prototyping and reduces overhead for processing large data sets.</p>
                     </div><!--//content-->
                 </div><!--//item-->
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -158,8 +162,8 @@
                         <i class="fa fa-comments-o"></i>
                     </div>
                     <div class="content">
-                        <h3 class="sub-title">Multilingual</h3>
-                        <p>SimpleElastix comes with native bindings for C++, Python, Java, R, Ruby, Octave, Lua, Tcl and C# so you can continue using your favorite tools.</p>
+                        <h3 class="sub-title">Multi-lingual</h3>
+                        <p>SimpleElastix comes with high-performance native bindings for Python, Java, R, Ruby, Octave, Lua, Tcl and C#.</p>
                     </div><!--//content-->
                 </div><!--//item-->
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -168,7 +172,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Powerful</h3>
-                        <p>Get fast results and accelerate development with multi-threaded C++ components. Individual components can be tuned for even more speed.</p>
+                        <p>High-performance multi-threaded C++ code and tuning options for CPU and memory consumption.</p>
                     </div><!--//content-->
                 </div><!--//item-->              
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -177,7 +181,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Parameter-driven Configuration</h3>
-                        <p>A parameter map interface makes it easy to configure registration components. Try out different transforms, metrics and optimizers by means of scripting.</p>
+                        <p>Quickly try out different transforms, metrics and optimizers using simple, declarative parameters.</p>
                     </div><!--//content-->
                 </div><!--//item-->               
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -186,7 +190,7 @@
                     </div>
                     <div class="content">
                         <h3 class="sub-title">Quickstart</h3>
-                        <p>Pre-configured parameter files for rigid-, affine-, non-rigid- and non-rigid groupwise registration serve as good starting points for new users.</p>
+                        <p>Opinionated preconfigured registration methods serve as robust starting points for many applications.</p>
                     </div><!--//content-->
                 </div><!--//item-->
                 <div class="item col-md-4 col-sm-6 col-xs-12">
@@ -214,7 +218,7 @@
                         </div><!--//profile-->
                         <div class="speech-bubble">
                             <p>SimpleElastix is exactly what I was looking for, combining the power of elastix and the ease of use of SimpleITK. I can integrate it flawlessly into my Python scripts.</p>
-                            <p><i>Fabien Pertuy, Research Engineer, <a href="http://www.ics-mci.fr" alt="ICS" target="_blank">Institut Clinique de la Souris</i></a></p>
+                            <p><i>Fabien Pertuy, Research Engineer, <a href="http://www.ics-mci.fr" alt="ICS" target="_blank">Institut Clinique de la Souris, France</i></a></p>
                         </div><!--//speech-bubble-->                        
                     </div><!--//author-message-->
                 </div>
@@ -226,7 +230,7 @@
                         </div><!--//profile-->
                         <div class="speech-bubble">
                             <p>We aim to advance understanding of anatomical changes in the human foot induced by weightbearing. SimpleElastix allowed our team to build a digital 3D model to visualize tarsal bone movements in very little time.</p>
-                            <p><i>Philip Hansen, MD, PhD <a href="http://www.frederiksberghospital.dk" alt="ICS" target="_blank">Frederiksberg Hospital</i></a></p>
+                            <p><i>Philip Hansen, MD, PhD, <a href="http://www.frederiksberghospital.dk" alt="ICS" target="_blank">Frederiksberg Hospital, Denmark</i></a></p>
                         </div><!--//speech-bubble-->                        
                     </div><!--//author-message-->
                 </div>
@@ -234,96 +238,88 @@
         </div>
     </section>
 
-    <section id="documentation" class="docs section">
+    <section id="support" class="docs section">
         <div class="container">
-            <div class="block">
-                <h2 class="title text-center">Documentation</h2>
+            <h2 class="title text-center">Support</h2>
+            <p class="intro text-center">Get professional support. Contact us for a discussion on how SimpleElastix can accelerate your time to market.</p>
+    
+           
+        <div class="row db-padding-btm db-attached">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                  <div class="db-wrapper">
+                <div class="db-pricing-eleven db-bk-color-two">
+                    <div class="price">
+                        FREE
+                        <small>forever</small>
+                    </div>
+                    <div class="type">
+                        Community
+                    </div>
+                    <ul>
+                        <li>Source code</li>
+                        <li>Apache 2.0 license</li>
+                        <li>Clone via Github</li>
+                        <li>Support via Github issues</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                    </ul>
+                    <div class="pricing-footer">
+                        <a href="https://github.com/kaspermarstal/SimpleElastix" class="btn db-button-color-square btn-lg">GITHUB REPOSITORY</a>
+                    </div>
+                </div>
+                      </div>
             </div>
-            <div class="block row">
-                <p class="btns text-center">
-                    <a class="btn btn-cta-primary" href="https://simpleelastix.readthedocs.org" target="_blank">HTML Documentation</a>
-                    <a class="btn btn-cta-secondary" href="http://media.readthedocs.org/pdf/simpleelastix/latest/simpleelastix.pdf" target="_blank">PDF Documentation</a>
-                </p>
-            </div> 
-            <div class="block">
-                <h3 class="sub-title text-center">Example 1: A Line of Code</h3>
-                <p>With SimpleElastix it is dead simple to align images of different patients. Elastix uses a multi-resolution strategy with Adaptive Stochastic Sampling (Klein et al. 2009) and Transform Bending Energy regularisation (Klein &amp; Staring 2010) by default. Depending on the complexity of your problem, you can often register images with a single function call. The following is Python code.</p>
-            </div> 
-                    <div class="block">
-                        <div class="code-block">
-                            <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
-                            <pre><code class="language-python"> >>> fixedImage = SimpleITK.ReadImage("fixedImage.nii")
- >>> movingImage = SimpleITK.ReadImage("movingImage.nii")
- >>> resultImage = SimpleITK.Elastix(fixedImage, movingImage, "nonrigid")</code></pre>
-                        </div><!--//code-block-->
-                    </div><!--//block-->
-            <div class="block">
-                <h3 class="sub-title text-center">Example 2: Robust Initialization</h3>
-                <p>Difficult registration problems often need initialization to account for global translation, scaling and rotation prior to non-rigid registration. You can pass a list of configuration objects (which we refer to as "parameter maps") and have elastix run registrations sequentially using output of one registration as input for the next.</p>
-                <div class="code-block">
-                    <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
-                    <pre><code class="language-python"> >>> parameterMapList = SimpleITK.ParameterMapList()
- >>> parameterMapList.push_back(SimpleITK.GetDefaultParameterMap("affine"))
- >>> parameterMapList.push_back(SimpleITK.GetDefaultParameterMap("nonrigid"))
- >>> resultImage = SimpleITK.Elastix(fixedImage, movingImage, parameterMapList)</code></pre>
-        </div><!--//code-block-->
-            </div><!--//block-->
-            
-            <div class="block">
-                <h3 class="sub-title text-center">Example 3: Atlas-based Segmentation</h3>
-                <p>You can apply transformations to multiple images. For example, you can transform a label image for atlas-based segmentation.</p>
-                <div class="code-block">
-                    <pre><code class="language-python"> # Non-rigid registration
- elastix = SimpleITK.SimpleElastix()
- elastix.SetParameterMap(SimpleITK.GetDefaultParameterMap())
- elastix.SetFixedImage(fixedImage)
- elastix.SetMovingImage(movingImage)
- elastix.Execute()
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                  <div class="db-wrapper">
+                <div class="db-pricing-eleven db-bk-color-three popular">
+                    <div class="price">
+                        <sup>$</sup>999
+                                <small>per year</small>
+                    </div>
+                    <div class="type">
+                        Academic
+                    </div>
+                    <ul>
+                        <li>Source code</li>
+                        <li>Apache 2.0 license</li>
+                        <li>Clone via Github</li>
+                        <li>Development Support</li>
+                        <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                    </ul>
+                    <div class="pricing-footer">
 
- # We turn off interpolation for labels
- parameterMap = elastix.GetTransformParameterMap()
- parameterMap[0]["ResampleInterpolator"] = ["FinalNearestNeighborInterpolator"]
+                        <a href="#" class="btn db-button-color-square btn-lg">CONTACT US</a>
+                    </div>
+                </div>
+                      </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                  <div class="db-wrapper">
+                <div class="db-pricing-eleven db-bk-color-six">
+                    <div class="price">
+                        <sup>$</sup>9999
+                                <small>per year</small>
+                    </div>
+                    <div class="type">
+                        Commercial
+                    </div>
+                    <ul>
+                        <li>Source code</li>
+                        <li>Apache 2.0 license</li>
+                        <li>Linux, OS X and Windows installer</li>
+                        <li>Development Support</li>
+                        <li>Production Support</li>
+                        <li>On-site training and consultancy</li>
+                    </ul>
+                    <div class="pricing-footer">
 
- # Warp label image using transform from above
- resultLabel = SimpleITK.Transformix(labelImage, parameterMap)</code></pre>
-                </div><!--//code-block-->
-            </div><!--//block-->              
-            <div class="block">
-                <h3 class="sub-title text-center">Example 4: Configuring Registration Components</h3>
-                <p>Elastix introduced the concept of a "parameter map" to specify registration components. A parameter map is a collection of key-value pairs that configure the registration procedure. Here are a couple of examples.</p>
-                <div class="code-block">
-                    <pre><code class="language-python"> parameterMap = SimpleITK.GetDefaultParameterMap("nonrigid")
-
- # Want to monitor registration convergence?
- parameterMap["WriteResultImageEachIteration"] = ["true"]
-
- # Want to use another optimizer?
- parameterMap["Optimizer"] = ["QuasiNewtonLBFGS"]
-
- # Want a more smooth deformation field?
- parameterMap["Metric1Weight"] = ["2.0"]
-
- # Want a more dense b-spline deformation field (mm)?
- parameterMap["FinalGridSpacingInPhysicalUnits"] = ["4.0"]
-
- # Want to make registration more robust?
- parameterMap["NumberOfResolutions"] = ["6"]
- parameterMap["NumberOfIterations"] = ["1024"]
- parameterMap["NumberOfSamples"] = ["8192"]
-
- # Want the raw b-spline parameters?
- bsplineParameters = elastix.GetTransformParameterMap()[0]["TransformParameters"]</code></pre>
-                </div><!--//code-block-->
-            </div><!--//block--> 
-            <div class="block">
-                <h3 class="sub-title text-center">Full Documentation</h3>
-                <p>The full documentation describes how to install SimpleElastix on Linux, Mac OS X and Windows. You will also find an extensive introduction to medical image registration, the different registration components and hands-on examples.</p>
-            </div><!--//block-->
-            <div class="block">
-                <p class="text-center">
-                    <a class="btn btn-cta-primary" href="https://simpleelastix.readthedocs.org" target="_blank">More on readthedocs.org</a>
-                </p>
-            </div><!--//block--> 
+                        <a href="#" class="btn db-button-color-square btn-lg">CONTACT US</a>
+                    </div>
+                </div>
+                      </div>
+            </div>
+        </div>
         </div>
     </section>
     
@@ -351,40 +347,50 @@
             </div>
             <div class="cta-container">
                 <div class="speech-bubble">                    
-                    <p>If you find SimpleElastix useful for your work you can cite</p>
+                    <p>You can support SimpleElastix by citing </p>
                     <p class="cite"><i>Kasper Marstal, SimpleElastix, 2015, Github repository: https://github.com/kaspermarstal/SimpleElastix, DOI: 10.5281/zenodo.19049</i></p>
-                    <p>or support further development by donating to this project!</p>
+                    <p>or making a donation to the Github project.</p>
                     <div class="icon-holder  text-center"><i class="fa fa-smile-o"></i></div>
                 </div><!--//speech-bubble-->
                 <div class="btn-container  text-center">         
                     <!--PayPal generated code starts-->
                     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                         <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="G2HKH795S373Y">
-                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <input type="hidden" name="hosted_button_id" value="BJ3H8U6PKSN3U">
+                        <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
                         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                     </form>
-                    <!--PayPal generated code ends-->                 
+<!--//PayPal generated code ends-->                 
                 </div><!--//btn-container-->
             </div><!--//cta-container-->
     </section>
-    
     <!-- ******CONTACT****** --> 
-    <section id="contact" class="contact section has-pattern">
+    <section id="contact" class="contact section has-pattern testimonials">
         <div class="container">
             <div class="contact-inner">
                 <h2 class="title  text-center">Contact</h2>
+
                 <div class="author-message">                      
                     <div class="profile">
                         <a href="http://kaspermarstal.github.io" target="_blank"><img class="img-responsive" src="assets/images/profile.jpeg" alt="Go to my website" /></a>
                     </div><!--//profile-->
                     <div class="speech-bubble">
-                        <h3 class="sub-title">I hope you find SimpleElastix useful in your work. </h3>
-                        <p>You will find my website at <a href="http://kaspermarstal.github.io" target="_blank" alt="Visit my website">kaspermarstal.github.io</a>. Feel free to get in touch if you have any questions or suggestions.</p>
+                        <h3 class="sub-title">We hope you will find SimpleElastix useful.</h3>
+                        <p>Questions or suggestions? We would love to hear from you.</p>
+                        <p>&nbsp;</p>
+                        <form action="//formspree.io/kaspermarstal@gmail.com" method="POST">
+                            <input type="text" name="name" class="formspree left" placeholder="Name">
+                            <input type="email" name="_replyto" class="formspree right" placeholder="Email">
+                            <textarea type="textarea" name="message" rows="5" class="formspree message" placeholder="Message"></textarea>
+                            <input type="submit" value="Send" class="btn db-button-color-square btn-lg">
+                            <input type="text" name="_gotcha" style="display:none" class="formspree" />
+                        </form>
                         <div class="source">
                             <span class="name">Kasper Marstal</span>
                             <br />
-                            <span class="title">PhD Student, M.Sc. Eng., Medicin &amp; Technology</span>
+                            <span class="title">M.Sc. Eng., Medicin &amp; Technology</span>
+                            <br/>
+                            <span class="title">CEO, S4</span>
                         </div><!--//source-->
                     </div><!--//speech-bubble-->                        
                 </div><!--//author-message-->
@@ -415,7 +421,7 @@
     <script type="text/javascript" src="assets/plugins/jquery.easing.1.3.js"></script>   
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
     <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
-    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/prism/min/prism-min.js"></script>    
     <script type="text/javascript" src="assets/js/main.js"></script>       
 </body>
 </html> 
