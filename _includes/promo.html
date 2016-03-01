@@ -1,0 +1,70 @@
+<!-- ******PROMO****** -->
+<section id="promo" class="promo section offset-header">
+    <div class="container text-center">
+        <h2 class="title">Simple<span class="highlight">Elastix</span></h2>
+        <p class="intro">Medical Image Registration Library</p>
+    </div><!--//container-->
+    <div class="container" style="height: 200px; margin-bottom: 30px;" >
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <ul class="keywords">
+                <li class="keywords">State-of-the-art medical image registration with a couple of lines of code</li>
+                <li class="keywords">Industry-standard implementation with <a class="citations" href="https://scholar.google.dk/scholar?cites=8050482836954489563&as_sdt=2005&sciodt=0,5&hl=en"> 700+ citations in the scientific litterature</a> </li>
+                <li class="keywords">Available in C++, Python, Java, R, Ruby, Octave, C#, Lua, and Tcl</li>
+            </ul>
+        </div>
+        <div id="header-carousel" class="carousel slide player col-xs-12 col-sm-6 col-md-6 col-lg-6" data-ride="carousel" data-interval="5000" style="margin-bottom: 30px;">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#header-carousel" data-slide-to="1"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <video class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" autoplay loop>
+                        <source src="assets/videos/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video><!--
+                    <div class="carousel-caption">   
+                        <h2>Simple<span class="highlight">Elastix</span></h2>
+                        <p>Medical Image Registration Library</p>
+                    </div>-->
+                </div>
+                <div class="item col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" style="padding-top: 40px;">
+                    <div class="block">
+                        <div class="code-block">
+                        <!--//Use Prismjs - http://prismjs.com/index.html#basic-usage -->
+                        <pre><code class="language-python line-numbers">import SimpleITK as sitk
+resultImage = sitk.Elastix(
+  sitk.ReadImage('fixedImage.nii'), 
+  sitk.ReadImage('fixedImage.nii')
+)</code></pre>
+                        </div><!--//code-block-->
+                    </div><!--//block-->
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#header-carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#header-carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+    <div class="container text-center">
+        <div class="btns">
+            <a class="btn btn-cta-primary" class="scrollto" href="#about">Tell me more!</a>
+            <a class="btn btn-cta-secondary" class="scrollto" href="#download">Download</a>
+        </div>
+        <ul class="meta list-inline">
+            <li><a href="https://github.com/kaspermarstal/SimpleElastix" target="_blank">Github repository</a></li>
+            <li><a href="https://simpleelastix.readthedocs.org/" target="_blank">Documentation</a></li>
+            <li><a href="http://dx.doi.org/10.5281/zenodo.19049"><img src="https://zenodo.org/badge/doi/10.5281/zenodo.19049.svg" alt="10.5281/zenodo.19049"></a></li>
+        </ul><!--//meta-->
+    </div><!--//container-->
+</section><!--//promo-->
