@@ -434,7 +434,7 @@ li.keywords:before {
 }
 /* ======= Docs Section ======= */
 .docs {
-  padding-top: 60px;
+  padding-top: 80px;
   background: #f5f5f5;
 }
 .docs .title {
@@ -478,38 +478,42 @@ li.keywords:before {
   max-width: 1000px;
 }
 /* ======= Download Section ======= */
-.download {
+.services {
   padding: 80px 0;
-  background: #074f66;
+  background: #17baef;
   box-shadow: 0px 0px 30px #444;
   color: #f5f5f5;
 }
-.download .btn-cta-primary {
+.services .btn-cta-primary {
   background: #17baef;
 }
-.download .btn-cta-primary:hover {
+.services .btn-cta-primary:hover {
   background: #0fabdd;
   border: 1px solid #053c4e;
   color: #fff;
 }
-.download .title {
+.services {
+  margin-top: 0;
+  color: #f5f5f5;
+}
+.title {
   margin-top: 0;
   margin-bottom: 60px;
   color: #f5f5f5;
 }
-.download .info {
+.services .info {
   max-width: 800px;
   margin: 0 auto;
 }
-.download .highlight {
+.services .highlight {
   color: #eebf3f;
 }
-.download .cite {
+.services .cite {
   margin-left: 40px;
   margin-right: 40px;
   color: #25bef0;
 }
-.download .cta-container {
+.services .cta-container {
   max-width: 540px;
   margin: 0 auto;
   margin-top: 60px;
@@ -522,15 +526,14 @@ li.keywords:before {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-.download .cta-container .btn {
+.services .cta-container .btn {
   width: 100%;
   margin-top: 20px;
 }
-.download .cta-container .speech-bubble {
+.services .cta-container .speech-bubble {
   background: #f5f5f5;
   color: #074f66;
   padding: 30px;
-  margin-bottom: 30px;
   position: relative;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -541,7 +544,7 @@ li.keywords:before {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-.download .cta-container .speech-bubble:after {
+.services .cta-container .speech-bubble:after {
   position: absolute;
   left: 50%;
   bottom: -10px;
@@ -554,18 +557,18 @@ li.keywords:before {
   border-right: 10px solid transparent;
   border-top: 10px solid #f5f5f5;
 }
-.download .cta-container .icon-holder {
+.services .cta-container .icon-holder {
   margin-bottom: 15px;
 }
-.download .cta-container .icon-holder .fa {
+.services .cta-container .icon-holder .fa {
   font-size: 56px;
 }
-.download .cta-container .intro {
+.services .cta-container .intro {
   margin-bottom: 30px;
 }
 /* ======= Contact Section ======= */
 .contact {
-  padding: 80px 0;
+  padding: 20px;
   background: #17baef;
   color: #fff;
 }
@@ -772,6 +775,10 @@ BACKGROUND COLORS
 .db-bk-color-six {
     background-color: #074f66;
 }
+
+.db-bk-color-four {
+    background-color: #074f66;
+}
 /*============================================================
 PRICING STYLES
 ==========================================================*/
@@ -802,6 +809,10 @@ PRICING STYLES
     color: #fff;
     line-height: 30px;
 }
+
+    i.fa {
+      line-height: 20px;
+    }
 
     .db-pricing-eleven ul {
         list-style: none;
