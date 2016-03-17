@@ -268,6 +268,13 @@ li.keywords {
   margin-bottom: 18px;
 }
 
+.keyanswer {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
 a.citations {
   color: #074f66;
 }
@@ -333,6 +340,26 @@ li.keywords:before {
   margin-top: 0;
   color: #074f66;
   font-size: 18px;
+}
+
+.about .services-sub-title {
+  margin-top: 0;
+  color: #074f66;
+  font-size: 24px;
+}
+
+.about .item .services-icon-holder {
+  position: absolute;
+  left: 25px;
+  top: 5px;
+}
+.about .item .services-icon-holder .fa {
+  font-size: 30px;
+  color: #074f66;
+}
+
+.about .highlight {
+  color: #eebf3f;
 }
 /* ======= Features Section ======= */
 .testimonials {
@@ -478,21 +505,21 @@ li.keywords:before {
   max-width: 1000px;
 }
 /* ======= Download Section ======= */
-.services {
+.download {
   padding: 80px 0;
-  background: #17baef;
+  background: #074f66;
   box-shadow: 0px 0px 30px #444;
   color: #f5f5f5;
 }
-.services .btn-cta-primary {
+.download .btn-cta-primary {
   background: #17baef;
 }
-.services .btn-cta-primary:hover {
+.download .btn-cta-primary:hover {
   background: #0fabdd;
   border: 1px solid #053c4e;
   color: #fff;
 }
-.services {
+.download {
   margin-top: 0;
   color: #f5f5f5;
 }
@@ -501,19 +528,19 @@ li.keywords:before {
   margin-bottom: 60px;
   color: #f5f5f5;
 }
-.services .info {
+.download .info {
   max-width: 800px;
   margin: 0 auto;
 }
-.services .highlight {
+.download .highlight {
   color: #eebf3f;
 }
-.services .cite {
+.download .cite {
   margin-left: 40px;
   margin-right: 40px;
   color: #25bef0;
 }
-.services .cta-container {
+.download .cta-container {
   max-width: 540px;
   margin: 0 auto;
   margin-top: 60px;
@@ -526,11 +553,11 @@ li.keywords:before {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-.services .cta-container .btn {
+.download .cta-container .btn {
   width: 100%;
   margin-top: 20px;
 }
-.services .cta-container .speech-bubble {
+.download .cta-container .speech-bubble {
   background: #f5f5f5;
   color: #074f66;
   padding: 30px;
@@ -544,7 +571,7 @@ li.keywords:before {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-.services .cta-container .speech-bubble:after {
+.download .cta-container .speech-bubble:after {
   position: absolute;
   left: 50%;
   bottom: -10px;
@@ -557,18 +584,18 @@ li.keywords:before {
   border-right: 10px solid transparent;
   border-top: 10px solid #f5f5f5;
 }
-.services .cta-container .icon-holder {
+.download .cta-container .icon-holder {
   margin-bottom: 15px;
 }
-.services .cta-container .icon-holder .fa {
+.download .cta-container .icon-holder .fa {
   font-size: 56px;
 }
-.services .cta-container .intro {
+.download .cta-container .intro {
   margin-bottom: 30px;
 }
 /* ======= Contact Section ======= */
 .contact {
-  padding: 20px;
+  padding: 80px;
   background: #17baef;
   color: #fff;
 }
@@ -804,10 +831,11 @@ PRICING STYLES
 .db-pricing-eleven {
     margin-bottom: 30px;
     margin-top: 50px;
-    text-align: center;
+    
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
     color: #fff;
-    line-height: 30px;
+    text-align: center;
+    /*line-height: 30px;*/
 }
 
     i.fa {
@@ -816,15 +844,16 @@ PRICING STYLES
 
     .db-pricing-eleven ul {
         list-style: none;
-        margin: 0;
-        text-align: center;
-        padding-left: 0px;
+        text-align: left;
+        padding-left: 30px;
+        padding-right: 30px;
+        /*;
+                margin: 0;*/
     }
 
         .db-pricing-eleven ul li {
             padding-top: 15px;
             padding-bottom: 15px;
-            cursor: pointer;
         }
 
             .db-pricing-eleven ul li i {
@@ -867,16 +896,19 @@ PRICING STYLES
 .db-attached > .col-sm-3 {
     padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .db-pricing-eleven.popular {
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
     .db-pricing-eleven.popular .price {
-        padding-top: 80px;
+        padding-top: 90px;
     }
 
+/* FORMS */
 input.formspree {
   background-color: #074f66;
   border: 0px;
@@ -890,12 +922,11 @@ input.formspree:focus {
 }
 
 input.left {
-  width: 48%;
-  margin-right: 2%;
+  width: 49%;
 }
 
 input.right {
-  width: 48%;
+  width: 49%;
 }
 
 textarea.message {
@@ -912,5 +943,10 @@ textarea.message:focus {
   outline: none;
 }
 
-
-
+.pull-right {
+  text-align: right;
+  margin-bottom: 10px;
+  width: 100%;
+  line-height: 2em;
+  vertical-align: middle;
+}
