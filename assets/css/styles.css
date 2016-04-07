@@ -950,3 +950,8 @@ textarea.message:focus {
   line-height: 2em;
   vertical-align: middle;
 }
+
+.example-highlight {
+  color: #074f66;
+  font-weight: 700;
+}
