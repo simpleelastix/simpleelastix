@@ -2,7 +2,7 @@
     <section id="examples" class="about section">
         <div class="container">
             <h2 class="title text-center">Examples</h2>
-            <p class="intro text-center">SimpleElastix support many different use cases. Here we highlight just a few. Go to the <a href="https://simpleelastix.readthedocs.org">full documentation</a> for more examples and installation instructions.</p>
+            <p class="intro text-center">SimpleElastix support many different use case. The examples shown here can be ported across languages. For more examples and installation instructions, see the <a href="https://simpleelastix.readthedocs.org">full documentation</a> .</p>
             <div class="row">
                 <div class="col-md-6 col-sm-12">
                     <span class="example-highlight">Example 1: Rapid prototyping in Lua</span> Integrate elastix into your image processing pipeline with a few lines of code.
@@ -13,7 +13,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6 col-sm-12">
-                    <span class="example-highlight">Example 2: Multi-atlas segmentation Python</span> Integration with SimpleITK's image processing algorithms allows you to use elastix as an algorithmic building block in  SimpleITK pipelines. Here, we use an object-oriented notation which is more flexible (and a little more verbose) than the functional style in Example 1.
+                    <span class="example-highlight">Example 2: Multi-atlas segmentation Python</span> Integration with SimpleITK's image processing algorithms allows you to use elastix as an algorithmic building block in  SimpleITK pipelines. Here, we segment an image using multiple atlases and SimpleITK's LabelVoting filter. The individual segmentations are transformed using deformation field obtained from registering images with elastix.
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <script src="https://gist.github.com/kaspermarstal/40846d131b9e667804e3a32070e96f4e.js"></script>
@@ -25,6 +25,14 @@
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <script src="https://gist.github.com/kaspermarstal/67c166f66c4276977ed411fa98ccc279.js"></script>
+                </div>             
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <span class="example-highlight">Example 4: Integration with ITK pipelines</span> Elastix and Transformix ITK filters were developed specifically for SimpleElastix and used under-the-hood in wrapped languages. You can use these filters directly in ITK pipelines for maximum performance. 
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <script src="https://gist.github.com/kaspermarstal/40169aa98ac77e1cbb8530087d2331f2.js"></script>
                 </div>             
             </div><!--
             <div class="row">
