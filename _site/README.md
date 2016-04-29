@@ -1,1 +1,0 @@
-This is the code that runs https://simpleelastix.github.io. 
